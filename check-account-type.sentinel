@@ -1,0 +1,11 @@
+import "tfrun"
+import "strings"
+
+isSimple = func(ws_name) {
+  return strings.has_suffix(ws_name, "simple")
+}
+
+main = rule {
+    isSimple(tfrun.workspace.name)
+}
+
